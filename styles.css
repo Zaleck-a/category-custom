@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+}
+
+
+/* C O N T E N E D O R  G E N E R A L */
+
+#contenedor-general {
+    width: 100%;
+    display: flex;
+}
+
+
+/* B A R R A   L A T E R A L */
+
+#aside {
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 0px 2px 2px #ccc;
+}
+
+#aside h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+
+/* L I S T A   D E  C A T E G O R I A S  */
+
+#lista-categorias {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#lista-categorias li {
+    width: 100%;
+    align-self: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word;
+    cursor: pointer;
+    position: relative;
+}
+
+.eliminar {
+    color: black;
+    border: none;
+    font-size: 15px;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 300ms;
+}
+
+.eliminar::before {
+    position: absolute;
+    content: "x";
+    top: 24%;
+    right: 7%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.eliminar:hover::before {
+    transform: scale(1.5);
+}
+
+#lista-categorias li:hover .eliminar::before {
+    opacity: 1;
+}
+
+
+/* A G R E G A R  C A T E G O R I A */
+
+#aside .nombre-categoria {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input.nombre-categoria {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type='color'] {
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+}
+
+#aside .color {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+button[type='button'] {
+    width: 100%;
+    background-color: rgb(214, 8, 8);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+button[type='button']:hover {
+    background-color: rgb(161, 12, 12);
+}
+
+
+/* C A L E N D A R I O */
+
+#calendario {
+    width: 80%;
+    padding: 10px;
+}
+
+#calendario h2 {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
